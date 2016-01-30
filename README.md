@@ -3,8 +3,8 @@
 To say it clear, this diagram is incomplete and at some points probably no fully true.
 The idea is just to make the getting started simpler by providing a use case and showing the by this.
 
-![overview] (https://github.com/raw/michaelgruczel/openstack-cheat-sheet/master/openStackCheatSheet.png)
-
+![overview] (https://raw.githubusercontent.com/michaelgruczel/openstack-cheat-sheet/master/openStackCheatSheet.png)
+             
 ## components of open stack
 
 all components are more or less independent and have rest APIs.
