@@ -84,3 +84,46 @@ Maybe your application stores data which should be available in another datacent
 Normally you have probably a database which runs shared on boot datacenters, 
 but stuff like videos or archives should not be in a database. Here you can use Swift 
 for scalable and reliable Object storeage by APIs.
+
+## play with openstack by CLIs
+
+openstack offer rest api, but there are command line tools as well, see
+
+http://docs.rackspace.com/servers/api/v2/cs-gettingstarted/content/section_gs_install_nova.html
+
+For an easy usage I prepared a vagrant box. 
+
+    vagrant up
+    vagrant ssh
+
+Log in by vagrant ssh and then setup of environment
+
+    export OS_AUTH_URL=...
+    export OS_TENANT_ID=...
+    export OS_TENANT_NAME=...
+    export OS_PROJECT_NAME=...
+    export OS_REGION_NAME=...
+    export OS_USERNAME=...
+    export OS_PASSWORD=...
+
+create and delete a server
+
+    # show images
+    nova image-list
+
+    # show flavors
+    nova flavor-list
+
+    # show running servers
+    nova list
+
+    #start a server (take image hash from image-list call)
+    nova boot ...
+
+    # check server with the id (see boot result) e.g. 
+    nova show ....    
+    
+    # delete server again
+    nova delete ...
+    
+see https://github.com/michaelgruczel/vagrant-nova-client for more details   
